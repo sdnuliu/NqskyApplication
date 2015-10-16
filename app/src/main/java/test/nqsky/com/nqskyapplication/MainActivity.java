@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mNewAdapter = new NewAdapter(getDatas());
         mRecyclerView.setAdapter(mNewAdapter);
+
+        //设置分割线
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
     }
 
     private String[] getDatas() {
